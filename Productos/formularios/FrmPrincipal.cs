@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Productos.formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,6 +30,12 @@ namespace Productos
         private void salirToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void edadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmArreglo frm = new FrmArreglo();
+            frm.ShowDialog();
         }
     }
 }

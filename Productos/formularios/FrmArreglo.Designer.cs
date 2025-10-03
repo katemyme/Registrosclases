@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.gbEdades = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbEdad = new System.Windows.Forms.TextBox();
-            this.lbEdades = new System.Windows.Forms.ListBox();
             this.lblPromedio = new System.Windows.Forms.Label();
+            this.lbEdades = new System.Windows.Forms.ListBox();
+            this.tbEdad = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbEdades.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,22 +49,15 @@
             this.gbEdades.TabStop = false;
             this.gbEdades.Text = "Edades";
             // 
-            // label1
+            // lblPromedio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(-3, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Edad";
-            // 
-            // tbEdad
-            // 
-            this.tbEdad.Location = new System.Drawing.Point(43, 27);
-            this.tbEdad.Name = "tbEdad";
-            this.tbEdad.Size = new System.Drawing.Size(83, 22);
-            this.tbEdad.TabIndex = 1;
-            this.tbEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.lblPromedio.Location = new System.Drawing.Point(26, 250);
+            this.lblPromedio.Name = "lblPromedio";
+            this.lblPromedio.Size = new System.Drawing.Size(100, 23);
+            this.lblPromedio.TabIndex = 3;
+            this.lblPromedio.Text = "Promedio: 0";
+            this.lblPromedio.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblPromedio.Click += new System.EventHandler(this.lblPromedio_Click);
             // 
             // lbEdades
             // 
@@ -75,14 +68,23 @@
             this.lbEdades.Size = new System.Drawing.Size(120, 180);
             this.lbEdades.TabIndex = 2;
             // 
-            // lblPromedio
+            // tbEdad
             // 
-            this.lblPromedio.Location = new System.Drawing.Point(26, 250);
-            this.lblPromedio.Name = "lblPromedio";
-            this.lblPromedio.Size = new System.Drawing.Size(100, 23);
-            this.lblPromedio.TabIndex = 3;
-            this.lblPromedio.Text = "Promedio: 0";
-            this.lblPromedio.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.tbEdad.Location = new System.Drawing.Point(43, 27);
+            this.tbEdad.Name = "tbEdad";
+            this.tbEdad.Size = new System.Drawing.Size(83, 22);
+            this.tbEdad.TabIndex = 1;
+            this.tbEdad.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbEdad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbEdad_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-3, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Edad";
             // 
             // FrmArreglo
             // 
@@ -92,6 +94,7 @@
             this.Controls.Add(this.gbEdades);
             this.Name = "FrmArreglo";
             this.Text = "Arreglo";
+            this.Load += new System.EventHandler(this.FrmArreglo_Load);
             this.gbEdades.ResumeLayout(false);
             this.gbEdades.PerformLayout();
             this.ResumeLayout(false);

@@ -9,7 +9,9 @@ namespace Productos.Dao
 
     public class EdadaDao
     {
-        public static int[] edades = new int[10];
+        public static int[] edades = new int[5];
         public static int pos = 0;
     }
+
 }
+

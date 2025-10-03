@@ -49,13 +49,19 @@ namespace Productos
             {
 
                 Logear();
+                e.SuppressKeyPress = true;
+
             }
         }
 
         private void tbusuario_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-            tbpassword.Focus();
+            {
+                tbpassword.Focus();
+                e.SuppressKeyPress = true;
+            }
+
         }
 
         private void chkShowPw_CheckedChanged(object sender, EventArgs e)
